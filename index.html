@@ -1277,6 +1277,142 @@
         document.addEventListener('DOMContentLoaded', function() {
             loadData();
         });
-    </script>
+    <script type="module">
+    // ==============================
+    // 🔥 FIREBASE INITIALIZATION
+    // ==============================
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+    import { getFirestore, collection, addDoc, onSnapshot, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDf-NcCqlxrnA9OKJZFHcihfKR3GN8vXY8",
+      authDomain: "dnd-ddd15.firebaseapp.com",
+      projectId: "dnd-ddd15",
+      storageBucket: "dnd-ddd15.firebasestorage.app",
+      messagingSenderId: "677425116906",
+      appId: "1:677425116906:web:56b6b92b755f116bc20993",
+      measurementId: "G-BRPN7D2WDQ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // ==============================
+    // ⚙️ LOCAL VARIABLES
+    // ==============================
+    let devModeEnabled = false;
+    let commissionRequests = [];
+
+    // ==============================
+    // 💾 FIREBASE SYNC FUNCTIONS
+    // ==============================
+    async function loadCommissionsFromFirebase() {
+        const querySnapshot = await getDocs(collection(db, "commissions"));
+        commissionRequests = querySnapshot.docs.map(doc => doc.data());
+        displayCommissionRequests();
+    }
+
+    function setupRealtimeListener() {
+        const commissionsRef = collection(db, "commissions");
+        onSnapshot(commissionsRef, (snapshot) => {
+            commissionRequests = snapshot.docs.map(doc => doc.data());
+            displayCommissionRequests();
+        });
+    }
+
+    // ==============================
+    // 📨 SUBMIT COMMISSION TO FIREBASE
+    // ==============================
+    async function submitCommission() {
+        const id = document.getElementById('commission-id').value;
+        const name = document.getElementById('commission-name').value;
+        const type = document.getElementById('commission-type').value;
+        const details = document.getElementById('commission-details').value;
+        const message = document.getElementById('commission-message').value;
+
+        if (!id || !name || !message) {
+            alert('Please fill in your ID, name, and request details');
+            return;
+        }
+
+        const commission = {
+            id: Date.now(),
+            investigatorId: id,
+            name: name,
+            type: type,
+            details: details,
+            message: message,
+            timestamp: new Date().toLocaleString(),
+            response: ''
+        };
+
+        try {
+            await addDoc(collection(db, "commissions"), commission);
+            console.log("✅ Commission added to Firestore");
+        } catch (e) {
+            console.error("❌ Error adding document: ", e);
+            alert("Error submitting commission — check Firebase rules.");
+        }
+
+        // Local fallback
+        commissionRequests.push(commission);
+        localStorage.setItem('commissionRequests', JSON.stringify(commissionRequests));
+        displayCommissionRequests();
+
+        closeCommissionModal();
+        alert('Commission request submitted successfully!');
+    }
+
+    // ==============================
+    // 🧭 DISPLAY COMMISSIONS
+    // ==============================
+    function displayCommissionRequests() {
+        const messagesDiv = document.getElementById('commission-messages');
+        messagesDiv.innerHTML = '';
+
+        if (commissionRequests.length === 0) {
+            messagesDiv.innerHTML = '<div style="text-align:center;color:#666;padding:40px;">No commission requests yet.</div>';
+            return;
+        }
+
+        commissionRequests.forEach((commission, index) => {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            const detailsHTML = commission.details
+                ? `<div style="margin:10px 0;padding:8px;background:rgba(255,255,255,0.05);border-radius:3px;"><strong>Specifications:</strong> ${commission.details}</div>`
+                : '';
+            messageDiv.innerHTML = `
+                <div class="message-header">
+                    <span class="message-type">${commission.type.toUpperCase()}</span>
+                    <span>${commission.timestamp}</span>
+                </div>
+                <div class="message-content">
+                    <strong>${commission.name}</strong> <span class="message-id">(ID: ${commission.investigatorId})</span><br>
+                    ${commission.message}
+                </div>
+                ${detailsHTML}
+            `;
+            messagesDiv.appendChild(messageDiv);
+        });
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    // ==============================
+    // 🧰 OTHER EXISTING FUNCTIONS
+    // ==============================
+    window.submitCommission = submitCommission; // Make callable from HTML button
+
+    // ==============================
+    // 🚀 INITIALIZE ON LOAD
+    // ==============================
+    document.addEventListener("DOMContentLoaded", async () => {
+        await loadCommissionsFromFirebase();
+        setupRealtimeListener();
+    });
+</script>
+    
 </body>
 </html>
+
