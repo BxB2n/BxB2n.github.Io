@@ -1,0 +1,1300 @@
+{
+	children = {
+		{
+			children = {
+			},
+			self = {
+				ClassName = "entity",
+				HideEntity = true,
+				Name = "Hide Real Body",
+				UniqueID = "5000000001",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						Angles = Angle(0, 90, 0),
+						ClassName = "clip",
+						Name = "split plane",
+						Position = Vector(0, 1.2, 0),
+						UniqueID = "5000000011",
+					},
+				},
+			},
+			self = {
+				BoneMerge = true,
+				ClassName = "model",
+				Model = "models/player/group01/male_07.mdl",
+				Name = "Left Half (set Model to your playermodel)",
+				UniqueID = "5000000010",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						Angles = Angle(0, -90, 0),
+						ClassName = "clip",
+						Name = "split plane",
+						Position = Vector(0, -1.2, 0),
+						UniqueID = "5000000021",
+					},
+				},
+			},
+			self = {
+				BoneMerge = true,
+				ClassName = "model",
+				Model = "models/player/group01/male_07.mdl",
+				Name = "Right Half (set Model to your playermodel)",
+				UniqueID = "5000000020",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						ClassName = "proxy",
+						Expression = "0.7+sin(time()*2.5)*0.04, 0.35+sin(time()*2.5)*0.02, 1.6",
+						Name = "breathing",
+						UniqueID = "5000000031",
+						VariableName = "Scale",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(0, 0, 0),
+				Bone = "spine 2",
+				ClassName = "model",
+				Color = Vector(25, 3, 5),
+				Model = "models/pac/default.mdl",
+				Name = "Interior Core",
+				Position = Vector(0, 0, 0),
+				Scale = Vector(0.7, 0.35, 1.6),
+				UniqueID = "5000000030",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "10+sin(time()*8.7)*35, sin(time()*7.1)*30, 0",
+								Name = "wriggle",
+								UniqueID = "6000000014",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										Angles = Angle(10, 0, 0),
+										ClassName = "model",
+										Color = Vector(255, 55, 65),
+										Fullbright = true,
+										Model = "models/pac/default.mdl",
+										Name = "tip",
+										Position = Vector(0, 0, 7),
+										Scale = Vector(0.07, 0.07, 0.9),
+										UniqueID = "6000000013",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(15, 0, 0),
+								ClassName = "model",
+								Color = Vector(190, 25, 40),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2",
+								Position = Vector(0, 0, 8),
+								Scale = Vector(0.11, 0.11, 1.0),
+								UniqueID = "6000000012",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(150, 15, 30),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 0),
+						Scale = Vector(0.16, 0.16, 1.1),
+						UniqueID = "6000000011",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 180, 0),
+				Bone = "spine",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "Mini Tendril 1",
+				Position = Vector(2, -1, 0),
+				Scale = Vector(0.14, 0.14, 0.3),
+				UniqueID = "6000000010",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "10+sin(time()*8.7+2.1)*35, sin(time()*7.1+2.1)*30, 0",
+								Name = "wriggle",
+								UniqueID = "6000000024",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										Angles = Angle(10, 0, 0),
+										ClassName = "model",
+										Color = Vector(255, 55, 65),
+										Fullbright = true,
+										Model = "models/pac/default.mdl",
+										Name = "tip",
+										Position = Vector(0, 0, 7),
+										Scale = Vector(0.07, 0.07, 0.9),
+										UniqueID = "6000000023",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(15, 0, 0),
+								ClassName = "model",
+								Color = Vector(190, 25, 40),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2",
+								Position = Vector(0, 0, 8),
+								Scale = Vector(0.11, 0.11, 1.0),
+								UniqueID = "6000000022",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(150, 15, 30),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 0),
+						Scale = Vector(0.16, 0.16, 1.1),
+						UniqueID = "6000000021",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 180, 0),
+				Bone = "spine",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "Mini Tendril 2",
+				Position = Vector(2, 1, 0),
+				Scale = Vector(0.14, 0.14, 0.3),
+				UniqueID = "6000000020",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "10+sin(time()*8.7+4.2)*35, sin(time()*7.1+4.2)*30, 0",
+								Name = "wriggle",
+								UniqueID = "6000000034",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										Angles = Angle(10, 0, 0),
+										ClassName = "model",
+										Color = Vector(255, 55, 65),
+										Fullbright = true,
+										Model = "models/pac/default.mdl",
+										Name = "tip",
+										Position = Vector(0, 0, 7),
+										Scale = Vector(0.07, 0.07, 0.9),
+										UniqueID = "6000000033",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(15, 0, 0),
+								ClassName = "model",
+								Color = Vector(190, 25, 40),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2",
+								Position = Vector(0, 0, 8),
+								Scale = Vector(0.11, 0.11, 1.0),
+								UniqueID = "6000000032",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(150, 15, 30),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 0),
+						Scale = Vector(0.16, 0.16, 1.1),
+						UniqueID = "6000000031",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 180, 0),
+				Bone = "spine 2",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "Mini Tendril 3",
+				Position = Vector(2, -1, 0),
+				Scale = Vector(0.14, 0.14, 0.3),
+				UniqueID = "6000000030",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "10+sin(time()*8.7+1.1)*35, sin(time()*7.1+1.1)*30, 0",
+								Name = "wriggle",
+								UniqueID = "6000000044",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										Angles = Angle(10, 0, 0),
+										ClassName = "model",
+										Color = Vector(255, 55, 65),
+										Fullbright = true,
+										Model = "models/pac/default.mdl",
+										Name = "tip",
+										Position = Vector(0, 0, 7),
+										Scale = Vector(0.07, 0.07, 0.9),
+										UniqueID = "6000000043",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(15, 0, 0),
+								ClassName = "model",
+								Color = Vector(190, 25, 40),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2",
+								Position = Vector(0, 0, 8),
+								Scale = Vector(0.11, 0.11, 1.0),
+								UniqueID = "6000000042",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(150, 15, 30),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 0),
+						Scale = Vector(0.16, 0.16, 1.1),
+						UniqueID = "6000000041",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 180, 0),
+				Bone = "spine 2",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "Mini Tendril 4",
+				Position = Vector(2, 1, 0),
+				Scale = Vector(0.14, 0.14, 0.3),
+				UniqueID = "6000000040",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "10+sin(time()*8.7+3.2)*35, sin(time()*7.1+3.2)*30, 0",
+								Name = "wriggle",
+								UniqueID = "6000000054",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										Angles = Angle(10, 0, 0),
+										ClassName = "model",
+										Color = Vector(255, 55, 65),
+										Fullbright = true,
+										Model = "models/pac/default.mdl",
+										Name = "tip",
+										Position = Vector(0, 0, 7),
+										Scale = Vector(0.07, 0.07, 0.9),
+										UniqueID = "6000000053",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(15, 0, 0),
+								ClassName = "model",
+								Color = Vector(190, 25, 40),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2",
+								Position = Vector(0, 0, 8),
+								Scale = Vector(0.11, 0.11, 1.0),
+								UniqueID = "6000000052",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(150, 15, 30),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 0),
+						Scale = Vector(0.16, 0.16, 1.1),
+						UniqueID = "6000000051",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 180, 0),
+				Bone = "spine 4",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "Mini Tendril 5",
+				Position = Vector(2, -1, 0),
+				Scale = Vector(0.14, 0.14, 0.3),
+				UniqueID = "6000000050",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "10+sin(time()*8.7+5.3)*35, sin(time()*7.1+5.3)*30, 0",
+								Name = "wriggle",
+								UniqueID = "6000000064",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										Angles = Angle(10, 0, 0),
+										ClassName = "model",
+										Color = Vector(255, 55, 65),
+										Fullbright = true,
+										Model = "models/pac/default.mdl",
+										Name = "tip",
+										Position = Vector(0, 0, 7),
+										Scale = Vector(0.07, 0.07, 0.9),
+										UniqueID = "6000000063",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(15, 0, 0),
+								ClassName = "model",
+								Color = Vector(190, 25, 40),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2",
+								Position = Vector(0, 0, 8),
+								Scale = Vector(0.11, 0.11, 1.0),
+								UniqueID = "6000000062",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(150, 15, 30),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 0),
+						Scale = Vector(0.16, 0.16, 1.1),
+						UniqueID = "6000000061",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 180, 0),
+				Bone = "spine 4",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "Mini Tendril 6",
+				Position = Vector(2, 1, 0),
+				Scale = Vector(0.14, 0.14, 0.3),
+				UniqueID = "6000000060",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						Bend = 8,
+						ClassName = "beam",
+						EndColor = Vector(140, 15, 25),
+						EndPointUID = "7000000011",
+						Frequency = 3,
+						Material = "cable/rope",
+						Name = "gore strand 1",
+						StartColor = Vector(140, 15, 25),
+						UniqueID = "7000000012",
+						Width = 0.6,
+					},
+				},
+			},
+			self = {
+				Alpha = 0,
+				Angles = Angle(0, 0, 0),
+				Bone = "spine",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "strand L 1",
+				Position = Vector(3, 3, 0),
+				Scale = Vector(0.05, 0.05, 0.05),
+				UniqueID = "7000000010",
+			},
+		},
+		{
+			children = {
+			},
+			self = {
+				Alpha = 0,
+				Angles = Angle(0, 0, 0),
+				Bone = "spine",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "strand R 1",
+				Position = Vector(3, -3, 0),
+				Scale = Vector(0.05, 0.05, 0.05),
+				UniqueID = "7000000011",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						Bend = 8,
+						ClassName = "beam",
+						EndColor = Vector(140, 15, 25),
+						EndPointUID = "7000000021",
+						Frequency = 3,
+						Material = "cable/rope",
+						Name = "gore strand 2",
+						StartColor = Vector(140, 15, 25),
+						UniqueID = "7000000022",
+						Width = 0.6,
+					},
+				},
+			},
+			self = {
+				Alpha = 0,
+				Angles = Angle(0, 0, 0),
+				Bone = "spine 2",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "strand L 2",
+				Position = Vector(3, 3, 0),
+				Scale = Vector(0.05, 0.05, 0.05),
+				UniqueID = "7000000020",
+			},
+		},
+		{
+			children = {
+			},
+			self = {
+				Alpha = 0,
+				Angles = Angle(0, 0, 0),
+				Bone = "spine 2",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "strand R 2",
+				Position = Vector(3, -3, 0),
+				Scale = Vector(0.05, 0.05, 0.05),
+				UniqueID = "7000000021",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						Bend = 8,
+						ClassName = "beam",
+						EndColor = Vector(140, 15, 25),
+						EndPointUID = "7000000031",
+						Frequency = 3,
+						Material = "cable/rope",
+						Name = "gore strand 3",
+						StartColor = Vector(140, 15, 25),
+						UniqueID = "7000000032",
+						Width = 0.6,
+					},
+				},
+			},
+			self = {
+				Alpha = 0,
+				Angles = Angle(0, 0, 0),
+				Bone = "spine 4",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "strand L 3",
+				Position = Vector(3, 3, 0),
+				Scale = Vector(0.05, 0.05, 0.05),
+				UniqueID = "7000000030",
+			},
+		},
+		{
+			children = {
+			},
+			self = {
+				Alpha = 0,
+				Angles = Angle(0, 0, 0),
+				Bone = "spine 4",
+				ClassName = "model",
+				Color = Vector(90, 8, 15),
+				Model = "models/pac/default.mdl",
+				Name = "strand R 3",
+				Position = Vector(3, -3, 0),
+				Scale = Vector(0.05, 0.05, 0.05),
+				UniqueID = "7000000031",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "sin(time()*1.2)*6 + clamp((owner_velocity_length()-130)/180,0,1)*(55+sin(time()*6)*40), 0, 0",
+								Name = "swing/stab",
+								UniqueID = "8000000109",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										ClassName = "proxy",
+										Expression = "25 + sin(time()*1.2)*7 + clamp((owner_velocity_length()-130)/180,0,1)*(sin(time()*6-1.3)*30-15), 0, 0",
+										Name = "knee",
+										UniqueID = "8000000103",
+										VariableName = "Angles",
+									},
+								},
+								{
+									children = {
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Angles = Angle(14, 0, 0),
+														ClassName = "model",
+														Color = Vector(255, 45, 55),
+														Fullbright = true,
+														Model = "models/pac/default.mdl",
+														Name = "claw",
+														Position = Vector(0, 0, 18),
+														Scale = Vector(0.13, 0.13, 2.2),
+														UniqueID = "8000000106",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(14, 0, 0),
+												ClassName = "model",
+												Color = Vector(170, 20, 35),
+												Model = "models/pac/default.mdl",
+												Name = "seg 4",
+												Position = Vector(0, 0, 22),
+												Scale = Vector(0.3, 0.3, 2.2),
+												UniqueID = "8000000105",
+											},
+										},
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Arguments = "160",
+														ClassName = "event",
+														Event = "owner_velocity_length",
+														Invert = true,
+														Name = "show when running",
+														Operator = "above",
+														UniqueID = "8000000108",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(-90, 0, 0),
+												AutoHitpos = true,
+												AutoHitposFilter = "world_only",
+												Bend = 3,
+												ClassName = "beam",
+												EndColor = Vector(60, 5, 10),
+												EndWidthMultiplier = 0.15,
+												Frequency = 1.5,
+												Material = "cable/rope",
+												Name = "ground stab (auto-hitpos)",
+												Position = Vector(0, 0, 24),
+												StartColor = Vector(150, 15, 25),
+												StartWidthMultiplier = 1,
+												UniqueID = "8000000107",
+												Width = 4,
+											},
+										},
+									},
+									self = {
+										Angles = Angle(12, 0, 0),
+										ClassName = "model",
+										Color = Vector(155, 18, 32),
+										Model = "models/pac/default.mdl",
+										Name = "seg 3",
+										Position = Vector(0, 0, 25),
+										Scale = Vector(0.42, 0.42, 2.4),
+										UniqueID = "8000000104",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(0, 0, 0),
+								ClassName = "model",
+								Color = Vector(140, 15, 30),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2 (knee)",
+								Position = Vector(0, 0, 27),
+								Scale = Vector(0.55, 0.55, 2.6),
+								UniqueID = "8000000102",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(125, 12, 28),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 5),
+						Scale = Vector(0.7, 0.7, 2.8),
+						UniqueID = "8000000101",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-35, 130, 0),
+				Bone = "left clavicle",
+				ClassName = "model",
+				Color = Vector(100, 8, 20),
+				Model = "models/pac/default.mdl",
+				Name = "Big Tendril 1 Anchor",
+				Position = Vector(0, 2, 0),
+				Scale = Vector(0.8, 0.8, 0.9),
+				UniqueID = "8000000100",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "sin(time()*1.2+3.1)*6 + clamp((owner_velocity_length()-130)/180,0,1)*(55+sin(time()*6+3.1)*40), 0, 0",
+								Name = "swing/stab",
+								UniqueID = "8000000209",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										ClassName = "proxy",
+										Expression = "25 + sin(time()*1.2+3.1)*7 + clamp((owner_velocity_length()-130)/180,0,1)*(sin(time()*6+1.8)*30-15), 0, 0",
+										Name = "knee",
+										UniqueID = "8000000203",
+										VariableName = "Angles",
+									},
+								},
+								{
+									children = {
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Angles = Angle(14, 0, 0),
+														ClassName = "model",
+														Color = Vector(255, 45, 55),
+														Fullbright = true,
+														Model = "models/pac/default.mdl",
+														Name = "claw",
+														Position = Vector(0, 0, 18),
+														Scale = Vector(0.13, 0.13, 2.2),
+														UniqueID = "8000000206",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(14, 0, 0),
+												ClassName = "model",
+												Color = Vector(170, 20, 35),
+												Model = "models/pac/default.mdl",
+												Name = "seg 4",
+												Position = Vector(0, 0, 22),
+												Scale = Vector(0.3, 0.3, 2.2),
+												UniqueID = "8000000205",
+											},
+										},
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Arguments = "160",
+														ClassName = "event",
+														Event = "owner_velocity_length",
+														Invert = true,
+														Name = "show when running",
+														Operator = "above",
+														UniqueID = "8000000208",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(-90, 0, 0),
+												AutoHitpos = true,
+												AutoHitposFilter = "world_only",
+												Bend = 3,
+												ClassName = "beam",
+												EndColor = Vector(60, 5, 10),
+												EndWidthMultiplier = 0.15,
+												Frequency = 1.5,
+												Material = "cable/rope",
+												Name = "ground stab (auto-hitpos)",
+												Position = Vector(0, 0, 24),
+												StartColor = Vector(150, 15, 25),
+												StartWidthMultiplier = 1,
+												UniqueID = "8000000207",
+												Width = 4,
+											},
+										},
+									},
+									self = {
+										Angles = Angle(12, 0, 0),
+										ClassName = "model",
+										Color = Vector(155, 18, 32),
+										Model = "models/pac/default.mdl",
+										Name = "seg 3",
+										Position = Vector(0, 0, 25),
+										Scale = Vector(0.42, 0.42, 2.4),
+										UniqueID = "8000000204",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(0, 0, 0),
+								ClassName = "model",
+								Color = Vector(140, 15, 30),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2 (knee)",
+								Position = Vector(0, 0, 27),
+								Scale = Vector(0.55, 0.55, 2.6),
+								UniqueID = "8000000202",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(125, 12, 28),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 5),
+						Scale = Vector(0.7, 0.7, 2.8),
+						UniqueID = "8000000201",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-35, 230, 0),
+				Bone = "right clavicle",
+				ClassName = "model",
+				Color = Vector(100, 8, 20),
+				Model = "models/pac/default.mdl",
+				Name = "Big Tendril 2 Anchor",
+				Position = Vector(0, -2, 0),
+				Scale = Vector(0.8, 0.8, 0.9),
+				UniqueID = "8000000200",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "sin(time()*1.2+3.1)*6 + clamp((owner_velocity_length()-130)/180,0,1)*(55+sin(time()*6+3.1)*40), 0, 0",
+								Name = "swing/stab",
+								UniqueID = "8000000309",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										ClassName = "proxy",
+										Expression = "25 + sin(time()*1.2+3.1)*7 + clamp((owner_velocity_length()-130)/180,0,1)*(sin(time()*6+1.8)*30-15), 0, 0",
+										Name = "knee",
+										UniqueID = "8000000303",
+										VariableName = "Angles",
+									},
+								},
+								{
+									children = {
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Angles = Angle(14, 0, 0),
+														ClassName = "model",
+														Color = Vector(255, 45, 55),
+														Fullbright = true,
+														Model = "models/pac/default.mdl",
+														Name = "claw",
+														Position = Vector(0, 0, 18),
+														Scale = Vector(0.13, 0.13, 2.2),
+														UniqueID = "8000000306",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(14, 0, 0),
+												ClassName = "model",
+												Color = Vector(170, 20, 35),
+												Model = "models/pac/default.mdl",
+												Name = "seg 4",
+												Position = Vector(0, 0, 22),
+												Scale = Vector(0.3, 0.3, 2.2),
+												UniqueID = "8000000305",
+											},
+										},
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Arguments = "160",
+														ClassName = "event",
+														Event = "owner_velocity_length",
+														Invert = true,
+														Name = "show when running",
+														Operator = "above",
+														UniqueID = "8000000308",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(-90, 0, 0),
+												AutoHitpos = true,
+												AutoHitposFilter = "world_only",
+												Bend = 3,
+												ClassName = "beam",
+												EndColor = Vector(60, 5, 10),
+												EndWidthMultiplier = 0.15,
+												Frequency = 1.5,
+												Material = "cable/rope",
+												Name = "ground stab (auto-hitpos)",
+												Position = Vector(0, 0, 24),
+												StartColor = Vector(150, 15, 25),
+												StartWidthMultiplier = 1,
+												UniqueID = "8000000307",
+												Width = 4,
+											},
+										},
+									},
+									self = {
+										Angles = Angle(12, 0, 0),
+										ClassName = "model",
+										Color = Vector(155, 18, 32),
+										Model = "models/pac/default.mdl",
+										Name = "seg 3",
+										Position = Vector(0, 0, 25),
+										Scale = Vector(0.42, 0.42, 2.4),
+										UniqueID = "8000000304",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(0, 0, 0),
+								ClassName = "model",
+								Color = Vector(140, 15, 30),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2 (knee)",
+								Position = Vector(0, 0, 27),
+								Scale = Vector(0.55, 0.55, 2.6),
+								UniqueID = "8000000302",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(125, 12, 28),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 5),
+						Scale = Vector(0.7, 0.7, 2.8),
+						UniqueID = "8000000301",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 155, 0),
+				Bone = "pelvis",
+				ClassName = "model",
+				Color = Vector(100, 8, 20),
+				Model = "models/pac/default.mdl",
+				Name = "Big Tendril 3 Anchor",
+				Position = Vector(0, 7, 2),
+				Scale = Vector(0.8, 0.8, 0.9),
+				UniqueID = "8000000300",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+						{
+							children = {
+							},
+							self = {
+								ClassName = "proxy",
+								Expression = "sin(time()*1.2)*6 + clamp((owner_velocity_length()-130)/180,0,1)*(55+sin(time()*6)*40), 0, 0",
+								Name = "swing/stab",
+								UniqueID = "8000000409",
+								VariableName = "Angles",
+							},
+						},
+						{
+							children = {
+								{
+									children = {
+									},
+									self = {
+										ClassName = "proxy",
+										Expression = "25 + sin(time()*1.2)*7 + clamp((owner_velocity_length()-130)/180,0,1)*(sin(time()*6-1.3)*30-15), 0, 0",
+										Name = "knee",
+										UniqueID = "8000000403",
+										VariableName = "Angles",
+									},
+								},
+								{
+									children = {
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Angles = Angle(14, 0, 0),
+														ClassName = "model",
+														Color = Vector(255, 45, 55),
+														Fullbright = true,
+														Model = "models/pac/default.mdl",
+														Name = "claw",
+														Position = Vector(0, 0, 18),
+														Scale = Vector(0.13, 0.13, 2.2),
+														UniqueID = "8000000406",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(14, 0, 0),
+												ClassName = "model",
+												Color = Vector(170, 20, 35),
+												Model = "models/pac/default.mdl",
+												Name = "seg 4",
+												Position = Vector(0, 0, 22),
+												Scale = Vector(0.3, 0.3, 2.2),
+												UniqueID = "8000000405",
+											},
+										},
+										{
+											children = {
+												{
+													children = {
+													},
+													self = {
+														Arguments = "160",
+														ClassName = "event",
+														Event = "owner_velocity_length",
+														Invert = true,
+														Name = "show when running",
+														Operator = "above",
+														UniqueID = "8000000408",
+													},
+												},
+											},
+											self = {
+												Angles = Angle(-90, 0, 0),
+												AutoHitpos = true,
+												AutoHitposFilter = "world_only",
+												Bend = 3,
+												ClassName = "beam",
+												EndColor = Vector(60, 5, 10),
+												EndWidthMultiplier = 0.15,
+												Frequency = 1.5,
+												Material = "cable/rope",
+												Name = "ground stab (auto-hitpos)",
+												Position = Vector(0, 0, 24),
+												StartColor = Vector(150, 15, 25),
+												StartWidthMultiplier = 1,
+												UniqueID = "8000000407",
+												Width = 4,
+											},
+										},
+									},
+									self = {
+										Angles = Angle(12, 0, 0),
+										ClassName = "model",
+										Color = Vector(155, 18, 32),
+										Model = "models/pac/default.mdl",
+										Name = "seg 3",
+										Position = Vector(0, 0, 25),
+										Scale = Vector(0.42, 0.42, 2.4),
+										UniqueID = "8000000404",
+									},
+								},
+							},
+							self = {
+								Angles = Angle(0, 0, 0),
+								ClassName = "model",
+								Color = Vector(140, 15, 30),
+								Model = "models/pac/default.mdl",
+								Name = "seg 2 (knee)",
+								Position = Vector(0, 0, 27),
+								Scale = Vector(0.55, 0.55, 2.6),
+								UniqueID = "8000000402",
+							},
+						},
+					},
+					self = {
+						Angles = Angle(0, 0, 0),
+						ClassName = "model",
+						Color = Vector(125, 12, 28),
+						Model = "models/pac/default.mdl",
+						Name = "seg 1",
+						Position = Vector(0, 0, 5),
+						Scale = Vector(0.7, 0.7, 2.8),
+						UniqueID = "8000000401",
+					},
+				},
+			},
+			self = {
+				Angles = Angle(-20, 205, 0),
+				Bone = "pelvis",
+				ClassName = "model",
+				Color = Vector(100, 8, 20),
+				Model = "models/pac/default.mdl",
+				Name = "Big Tendril 4 Anchor",
+				Position = Vector(0, -7, 2),
+				Scale = Vector(0.8, 0.8, 0.9),
+				UniqueID = "8000000400",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						ClassName = "proxy",
+						Expression = "0, 0, clamp((owner_velocity_length()-130)/180,0,1)*(18+sin(time()*12)*2)",
+						Name = "lift height",
+						UniqueID = "1000000003",
+						VariableName = "Position",
+					},
+				},
+			},
+			self = {
+				Bone = "pelvis",
+				ClassName = "bone",
+				Name = "Body Lift (pelvis)",
+				UniqueID = "1000000002",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						ClassName = "proxy",
+						Expression = "clamp((owner_velocity_length()-130)/180,0,1)*14, 0, 0",
+						Name = "hunch forward",
+						UniqueID = "1000000009",
+						VariableName = "Angles",
+					},
+				},
+			},
+			self = {
+				Bone = "spine 1",
+				ClassName = "bone",
+				Name = "Hunch (spine)",
+				UniqueID = "1000000008",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						ClassName = "proxy",
+						Expression = "clamp((owner_velocity_length()-130)/180,0,1)*(24+sin(time()*6)*7), 0, 0",
+						Name = "dangle",
+						UniqueID = "1000000005",
+						VariableName = "Angles",
+					},
+				},
+			},
+			self = {
+				Bone = "left thigh",
+				ClassName = "bone",
+				Name = "Left Leg Dangle",
+				UniqueID = "1000000004",
+			},
+		},
+		{
+			children = {
+				{
+					children = {
+					},
+					self = {
+						ClassName = "proxy",
+						Expression = "clamp((owner_velocity_length()-130)/180,0,1)*(24+sin(time()*6+3.1)*7), 0, 0",
+						Name = "dangle",
+						UniqueID = "1000000007",
+						VariableName = "Angles",
+					},
+				},
+			},
+			self = {
+				Bone = "right thigh",
+				ClassName = "bone",
+				Name = "Right Leg Dangle",
+				UniqueID = "1000000006",
+			},
+		},
+	},
+	self = {
+		ClassName = "group",
+		EditorExpand = true,
+		Name = "The Thing - Split Kagune",
+		UniqueID = "1000000001",
+	},
+}
